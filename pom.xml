@@ -85,8 +85,8 @@
   <name>paralaxTemplate</name>
   <description>This is the custom profile module (paralaxTemplate) for running on a Digital Factory server.</description>
   <scm>
-    <connection>scm:dummy:uri</connection>
-    <developerConnection>scm:dummy:uri</developerConnection>
+    <connection>scm:git:git@github.com:peterdj/parallax-template.git</connection>
+    <developerConnection>scm:git:git@github.com:peterdj/parallax-template.git</developerConnection>
   </scm>
   <properties>
     <jahia-depends>default,contact</jahia-depends>
