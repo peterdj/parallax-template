@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <content xmlns:j="http://www.jahia.org/jahia/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0">
     <modules jcr:primaryType="jnt:modules">
-        <paralaxtemplate j:dependencies="contact default"
+        <paralaxtemplate j:dependencies="bootstrap-components contact default"
                        j:installedModules="paralaxtemplate"
                        j:modulePriority="0"
                        j:moduleType="templatesSet"
                        j:title="paralaxTemplate"
                        jcr:mixinTypes="jmix:hasExternalProviderExtension"
                        jcr:primaryType="jnt:module">
-                <sources jcr:mixinTypes="jmix:hasExternalProviderExtension"
+                <sources jcr:mixinTypes="jmix:hasExternalProviderExtension jmix:sourceControl"
                   jcr:primaryType="jnt:moduleVersionFolder"
                   j:staticMountPointProviderKey="module-paralaxtemplate-1.0-SNAPSHOT">
-                    <src jcr:primaryType="jnt:folder">
-                        <main jcr:primaryType="jnt:folder">
+                    <src jcr:mixinTypes="jmix:sourceControl" jcr:primaryType="jnt:folder">
+                        <main jcr:mixinTypes="jmix:sourceControl" jcr:primaryType="jnt:folder">
                             <resources jcr:primaryType="jnt:folder">
                                 <css jcr:primaryType="jnt:cssFolder">
                                     <paralax.css jcr:primaryType="jnt:cssFile"/>
@@ -44,15 +44,25 @@
                         <home jcr:primaryType="jnt:pageTemplate"/>
                     <simple jcr:primaryType="jnt:pageTemplate"/>
                         <pagecontent jcr:primaryType="jnt:contentList">
-                            <navmenu j:baselineNode="home"
-                           j:maxDepth="2"
-                           j:menuItemView="menuElement"
-                           j:startLevel="0"
-                           jcr:primaryType="jnt:navMenu">
-                                <j:translation_en jcr:language="en"
+                            <menu fluid="false"
+                                     inverse="false"
+                                     jcr:primaryType="jnt:bootstrapNavBar"
+                                     option="navbar-fixed-top"
+                                     responsive="true">
+                                <j:translation_en j:workInProgress="false"
+                                       jcr:language="en"
                                        jcr:primaryType="jnt:translation"
-                                       jcr:title="navMenu"/>
-                            </navmenu>
+                                       jcr:title="Menu"/>
+                                <menu-items j:maxDepth="2"
+                                 j:menuItemView="menuElement"
+                                 j:startLevel="0"
+                                 jcr:primaryType="jnt:bootstrapNavMenu">
+                                    <j:translation_en j:workInProgress="false"
+                                          jcr:language="en"
+                                          jcr:primaryType="jnt:translation"
+                                          jcr:title="Menu Items"/>
+                                </menu-items>
+                            </menu>
                             <mainArea j:allowedTypes=""
                             j:workInProgress="false"
                             jcr:primaryType="jnt:area"/>

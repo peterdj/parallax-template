@@ -89,7 +89,7 @@
     <developerConnection>scm:git:git@github.com:peterdj/parallax-template.git</developerConnection>
   </scm>
   <properties>
-    <jahia-depends>default,contact</jahia-depends>
+    <jahia-depends>default,bootstrap-components,contact</jahia-depends>
   </properties>
   <repositories>
     <repository>
